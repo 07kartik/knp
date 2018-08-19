@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Safari</title>
+	<link rel="stylesheet" type="text/css" href="kitrak.css">
+</head>
+<body class="body">
+<div class="caption">		Kitrak Safari Booking			</div> <br />
+<br /><br />
+<div>
+	<div class="formstyle">
+		<div>
+			<form onsubmit="my()">
+				<div>
+					<div>Personal Details</div>
+					<table>
+						<tr>
+							<td><label>First Name</label></td>
+							<td><input class="firstname" type="text" name="fname" placeholder="your first name" required="required" /></td>
+						</tr>
+						<tr>
+							<td><label>Last Name</label></td>
+							<td><input class="lastname" type="text" name="lname" placeholder="your last name" required="required" /></td>
+						</tr>
+						<tr>
+							<td><label>Age</label></td>
+							<td><input class="age" type="text" name="agee" placeholder="your age" maxlength="2" required="required" /></td>
+						</tr>
+						<tr>
+							<td><label>City</label></td>
+							<td><input class="city" type="text" name="cityy" placeholder="your city name" minlength="5" maxlength="20" required="required" /></td>
+						</tr>
+						<tr>
+							<td><label>Aadhar no</label></td>
+							<td><input class="aadharno" type="text" name="aadharnoo" placeholder="your aadhar number" maxlength="12" minlength="12" required="Enter only numbers" /></td>
+						</tr>
+						<tr>	
+							<td><label>PAN Id no</label></td>
+							<td><input class="panidno" type="text" name="panidnoo" placeholder="your PAN no" required="required" minlength="6" maxlength="15" /></td>
+						</tr>
+						<tr>
+							<td><label>Passport no</label></td>
+							<td><input class="passportno" type="text" name="passportnoo" placeholder="your passport no" required="required" minlength="10" maxlength="20" /></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<div>Contact Details</div>
+					<table>
+						<tr>
+							<td><label>Contact no</label></td>
+							<td><input class="cno1" type="text" name="cno1o" placeholder="your mobile no" minlength="7" maxlength="20" required="required" /></td>
+						</tr>
+						<tr>
+							<td><label>Alternate no</label></td>
+							<td><input class="cno2" type="text" name="cno2o" placeholder="your alternate mobile no" minlength="7" maxlength="20" required="required" /></td>
+						</tr>
+						<tr>
+							<td><label>Email Id</label></td>
+							<td><input class="email" type="email" name="emailo" placeholder="your email Id" minlength="7" maxlength="50" required="required" /></td>
+						</tr>
+					</table>
+				</div>
+		</div>
+			<center><input type="submit" name="submitbutton" value="Submit" /></center>
+			</form>
+	</div>
+</div>
+
+		
+<script type="text/javascript">
+	
+	const my = () => {
+		fname = document.querySelector('.firstname').value;
+		lname = document.querySelector('.lastname').value;
+		age = document.querySelector('.age').value;
+		city = document.querySelector('.firstname').value;
+		ano = document.querySelector('.aadharno').value;
+		pannumber = document.querySelector('.panidno').value;
+		passnumber = document.querySelector('.passportno').value;
+		cno = document.querySelector('.cno1').value;
+		cno2 = document.querySelector('.cno2').value;
+		// alert(age+' '+ano+' '+cno+' '+cno2);
+		// if(isNaN(age)==true || isNaN(ano)==true || isNaN(cno)==true || isNaN(cno2)==true) {
+		// 	alert('Enter age, aadharcard number and contact numbers in numeric format only');
+		// }
+		if(isNaN(age) && age!='') {
+			alert('Enter age in Numbers only');
+		} else if(isNaN(ano) && ano!='') {
+			alert('Enter aadhar card no in Numbers only');
+		} else if(isNaN(cno) && cno!='') {
+			alert('Enter contact no in Numbers only');
+		} else if(isNaN(cno2) && cno2!='') {
+			alert('Enter alternate no in Numbers only');
+		} else if(cno == cno2 && cno!='' && cno2!='') {
+			alert('Enter altenate number, not the same')
+		}
+	}
+</script>
+</body>
+</html>
